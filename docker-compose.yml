@@ -12,3 +12,21 @@ services:
       - '8080:8080'   #follow you port
     volumes:
       - '/home/asura/Desktop/test:/app/filestorage/images/'
+    depends_on:
+      - db
+
+  db:
+    container_name: 'store_db'
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: mbanking_prod
+      POSTGRES_USER: springdb
+      POSTGRES_PASSWORD: ITE2@2024
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
