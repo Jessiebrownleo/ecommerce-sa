@@ -9,7 +9,7 @@ services:
     environment:
       - TZ=Asia/Bangkok
     ports:
-      - '8080:8080'   #follow you port
+      - '8086:8080'   #follow you port
     volumes:
       - '/home/asura/Desktop/test:/app/filestorage/images/'
     depends_on:
@@ -24,7 +24,7 @@ services:
       POSTGRES_USER: springdb
       POSTGRES_PASSWORD: ITE2@2024
     ports:
-      - '5432:5432'
+      - '3242:5432'
     volumes:
       - db_data:/var/lib/postgresql/data
 
