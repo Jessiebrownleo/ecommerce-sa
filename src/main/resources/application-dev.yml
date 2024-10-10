@@ -3,7 +3,7 @@ server:
 #Congiguration for the database
 spring:
   datasource:
-    url: jdbc:postgresql://152.42.244.49:3242/mbanking_prod
+    url: jdbc:postgresql://139.59.118.150:3242/mbanking_prod
     username: springdb
     password: ITE2@2024
     driver-class-name: org.postgresql.Driver
